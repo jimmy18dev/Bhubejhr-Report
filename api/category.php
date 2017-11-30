@@ -20,6 +20,12 @@ $category = new Category();
 switch ($_SERVER['REQUEST_METHOD']){
 	case 'GET':
 		switch ($_GET['request']){
+			case 'get':
+				$category_id = $_GET['category_id'];
+				$dataset = $category->get($category_id);
+				$returnObject['data'] = $dataset;
+				$returnObject['message'] = 'get category';
+				break;
 			case 'list_all':
 				$dataset = $category->listAll();
 				$returnObject['dataset'] = $dataset;
@@ -48,6 +54,11 @@ switch ($_SERVER['REQUEST_METHOD']){
 				
 				$returnObject['category_id'] = $category_id;
 				$returnObject['message'] = 'Category created';
+				break;
+			case 'delete':
+				$category_id = $_POST['category_id'];
+				$category_id = $category->delete($category_id);
+				$returnObject['message'] = 'Category deleted';
 				break;
 			default:
 				$returnObject['message'] = 'POST API Not found!';

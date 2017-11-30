@@ -8,9 +8,10 @@
 		<div class="more-menu" id="menuProfile">
 			<div class="arrow-up"></div>
 			<?php if($user->permission == 'admin'){?>
-			<a href="admin"><i class="fa fa-id-badge" aria-hidden="true"></i>Admin Panel</a>
+			<a href="admin/report"><i class="fa fa-file-text-o" aria-hidden="true"></i>รายงาน</a>
+			<a href="admin/category"><i class="fa fa-folder" aria-hidden="true"></i>หมวดหมู่</a>
 			<?php }?>
-			<a href="logout" class="btn-logout"><i class="fa fa-sign-out" aria-hidden="true"></i>Logout</a>
+			<a href="logout" class="btn-logout"><i class="fa fa-sign-out" aria-hidden="true"></i>ออกจากระบบ</a>
 		</div>
 	</div>
 	<?php }else{?>

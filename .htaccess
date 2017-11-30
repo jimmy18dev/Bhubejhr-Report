@@ -9,7 +9,9 @@ RewriteRule ^category/([0-9]+)$ /index.php?category=$1 [L]
 RewriteRule ^goto/([0-9]+)$ /goto.php?id=$1 [L]
 RewriteRule ^search /index.php?q=$1 [L,QSA]
 
-RewriteRule ^admin$ /admin.php [L]
+RewriteRule ^admin/report$ /admin-report.php [L]
+RewriteRule ^admin/category$ /admin-category.php [L]
+
 RewriteRule ^signin$ /login.php [L]
 RewriteRule ^signup$ /register.php [L]
 RewriteRule ^logout$ /logout.php [L]
