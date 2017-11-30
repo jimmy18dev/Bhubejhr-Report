@@ -1,0 +1,22 @@
+RewriteEngine On
+# RewriteCond %{HTTPS} off
+# RewriteRule (.*) https://%{SERVER_NAME}/$1 [R,L]
+
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+
+RewriteRule ^category/([0-9]+)$ /index.php?category=$1 [L]
+RewriteRule ^goto/([0-9]+)$ /goto.php?id=$1 [L]
+RewriteRule ^search /index.php?q=$1 [L,QSA]
+
+RewriteRule ^admin$ /admin.php [L]
+RewriteRule ^signin$ /login.php [L]
+RewriteRule ^signup$ /register.php [L]
+RewriteRule ^logout$ /logout.php [L]
+
+ErrorDocument 400     /error-404.php
+ErrorDocument 401     /error-404.php
+ErrorDocument 403     /error-403.php
+ErrorDocument 404     /error-404.php
+ErrorDocument 500     /error-500.php
+ErrorDocument 503     /error-500.php

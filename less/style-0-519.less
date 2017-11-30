@@ -1,0 +1,535 @@
+// FONT SIZE
+@fontsize_big       :2em;
+@fontsize_topic     :1.2em;
+@fontsize_normal    :0.9em;
+@fontsize_mini      :0.75em;
+
+.header{
+	.btn-back{
+		padding: 18px 5%;
+		height: 14px;
+		font-size: 1em;
+		line-height: 1em;
+
+		i{ margin-right: 20px; }
+	}
+
+	a.logo{
+		padding: 18px 5%;
+		height: 14px;
+		font-size: 1em;
+
+		img{
+			height: 24px;
+			margin-right: 10px;
+			margin-top: -5px;
+		}
+	}
+
+	.btn-profile{
+		width: 30%;
+		padding: 18px 5%;
+		height: 14px;
+		background: #AAAAAA; 
+
+		i{ margin-left: 10px; }
+
+		.more-menu{
+			position: absolute;
+			width: 200px;
+			top: 90%;
+			right: 10%;
+			padding: 5% 0%;
+			background: #FFFFFF;
+			border-radius: 3px;
+			display: none;
+			z-index: 999;
+			box-shadow: 0px 0px 20px rgba(0,0,0,0.3);
+
+			&.open{ display: block; }
+
+			.arrow-up{
+				position: absolute;
+				bottom: 100%;
+				right: 15%;
+				border: 7px solid transparent;
+				border-bottom-color: @bg_color;
+			}
+
+			a{
+				width: 80%;
+				padding: 6% 10%;
+				float: left;
+				display: inline-block;
+				text-decoration: none;
+				color: #333333;
+				i{
+					margin: 0;
+					margin-right: 15px;
+				}
+
+				&:last-child{ border-bottom: 0px; }
+				&:hover{ background: #EEEEEE; }
+			}
+		}
+	}
+}
+
+.list{
+	width: 100%;
+	margin: 0%;
+	margin-top: 50px;
+	margin-bottom: 5%;
+	float: left;
+	display: inline-block;
+
+	.topic{
+		width: 90%;
+		margin: 5%;
+		margin-bottom: 0%;
+
+		.h{ padding: 4% 0%; }
+		.btn{ padding: 4%; }
+	}
+
+	.apps-list{
+		width: 90%;
+		margin: 5%;
+		float: left;
+		display: inline-block;
+
+		.app-items{
+			width: 100%;
+			padding: 7% 5%;
+			margin: 0%;
+			margin-bottom: 5%;
+
+			&.btn-new-app{
+				padding: 10% 0%;
+				font-size: 1em;
+
+				i{
+					margin-right: 10px;
+					font-size: 1em;
+				}
+			}
+
+			.detail{
+				height: auto;
+
+				h2{
+					margin-bottom: 2%;
+					font-size: 1.2em;
+					line-height: 1.3em;
+				}
+
+				p{
+					font-size: 0.8em;
+					line-height: 1.4em;
+				}
+			}
+
+			.time{
+				width: 60%;
+				font-size: 0.7em;
+				margin-top: 5%;
+			}
+			.stat{
+				width: 40%;
+				font-size: 1.6em;
+			}
+		}
+	}
+
+	.approve-waiting{
+		width: 70%;
+		margin: 15% 15%;
+		float: left;
+		display: inline-block;
+		text-align: center;
+		color: @fontcolor_light;
+
+		.icon{
+			width: 100%;
+			float: left;
+			display: inline-block;
+			margin-bottom: 1%;
+			font-size: 5em;
+			color: @fontcolor_gray;
+		}
+
+		p{
+			font-size: @fontsize_big;
+			font-style: italic;
+		}
+	}
+}
+
+.pagehead{
+	width: 100%;
+	padding: 0%;
+	margin-top: 50px;
+
+	.head{
+		width: 90%;
+		padding: 5%;
+
+		h1{
+			font-size: 1.4em;
+			line-height: 1.3em;
+		}
+		p{
+			font-size: 0.8em;
+			line-height: 1.3em;
+		}
+	}
+
+	.tab{
+		.tab-items{
+			padding: 2%;
+			font-size: 1em;
+			text-align: center;
+
+			span{
+				width: 100%;
+				float: left;
+				display: inline-block;
+				font-size: 0.7em;
+			}
+
+			i{
+				width: 100%;
+				font-size: 1.1em;
+				margin: 0px;
+				margin-bottom: 5px;
+			}
+		}
+	}
+}
+
+.container{
+	width: 100%;
+	margin: 0%;
+	margin-bottom: 5%;
+
+	h2{
+		width: 90%;
+		margin: 5%;
+		margin-bottom: 3%;
+		font-size: 1em;
+	}
+
+	.notfound{
+		width: 100%;
+		padding: 30% 0%;
+		float: left;
+		display: inline-block;
+		text-align: center;
+		color: @fontcolor_normal;
+		font-style: italic;
+		letter-spacing: 1px;
+		font-size: @fontsize_topic;
+	}
+
+	.token-input{
+		width: 80%;
+		padding: 5%;
+		margin: 1% 5%;
+		font-size: 0.9em;
+	}
+
+	.list-filter{
+		position: inherit;
+		width: 90%;
+		padding: 5%;
+		font-size: 0.8em;
+		margin-top: 50px;
+		background: #EEEEEE;
+
+		a{
+			width: auto;
+			padding: 8px 10px;
+			margin-bottom: 5px;
+			margin-right: 5px;
+			float: left;
+			display: inline-block;
+			line-height: 1em;
+			background: #FFFFFF;
+			border-radius: 5px;
+
+			i{ display: none; }
+
+			&.-active{
+				background: @primary_color;
+				color: #FFFFFF;
+				font-weight: normal;
+			}
+			&:hover{ text-decoration: none; }
+		}		
+	}
+
+	.reference{
+		margin-top: 0px;
+
+		.ref-items{
+			width: 90%;
+			padding: 5%;
+			border-bottom: 1px solid #EEEEEE;
+
+			h3{
+				font-size: 1.4em;
+				line-height: 1.4em;
+			}
+			p{
+				font-size: 0.8em;
+				line-height: 1.3em;
+				margin-top: 3%;
+
+				&.mini{
+					font-size: 0.6em;
+					margin-top: 0%;
+				}
+
+				span{
+					margin-right: 5px;
+					padding: 3px 6px;
+				}
+			}
+		}
+	}
+
+	.chart{
+		width: 90%;
+		margin: 5%;
+		margin-bottom: 5%;
+
+		canvas{ height: 300px; }
+	}
+
+	.stat{
+		width: 90%;
+		margin: 5%;
+
+		.stat-items{
+			width: 50%;
+			margin-bottom: 5%;
+
+			.v{
+				font-size: 1.6em;
+				line-height: 1.3em;
+			}
+			.c{ font-size: 0.8em; }
+		}
+	}
+
+	.log{
+		margin-bottom: 5%;
+
+		.empty{
+			padding: 30% 0%;
+			font-size: 0.8em;
+		}
+
+		.log-container{ border: 0px; }
+		.log-items{
+			width: 96%;
+			padding: 2%;
+			font-size: 0.7em;
+
+			.time{ width: 25%; }
+			.id{ width: 10%; }
+			.ref{
+				width: 50%;
+
+				.method{
+					float: left;
+					display: inline-block;
+					background: #CCCCCC;
+					color: #FFFFFF;
+					font-size: @fontsize_mini;
+					padding: 2px 5px;
+					padding-top: 3px;
+					line-height: 1em;
+					margin-top: 2px;
+					margin-right: 10px;
+					border-radius: 2px;
+
+					&.get{ background: @color_get; }
+					&.post{ background: @color_post; }
+					&.put{ background: @color_put; }
+					&.delete{ background: @color_delete; }
+				}
+
+				a{
+					float: left;
+					display: inline-block;
+					text-decoration: none;
+					color: @fontcolor_gray;
+
+					i{
+						float: left;
+						display: inline-block;
+						font-size: 0.9em;
+						line-height: 1.7em;
+						margin-right: 7px;
+					}
+				}
+			}
+			.execute{ width: 15%; }
+		}
+	}
+
+	.form{
+		width: 100%;
+		padding: 5%;
+		margin-bottom: 5%;
+
+		p{ font-size: 0.9em; }
+
+		.form-items{
+			margin-bottom: 5%;
+
+			label{
+				font-size: 0.8em;
+				margin-bottom: 1%;
+			}
+
+			.inputtext{
+				padding: 4% 0%;
+				font-size: 1em;
+			}
+
+			.inputtextarea{
+				padding: 4% 0%;
+				height: 70px;
+				font-size: 1em;
+			}
+
+			.select{
+				&:after{
+					border-top: 10px solid @primary_color;
+					top: 18px;
+					right: 5%;
+				}
+
+				select{
+					width: 100%;
+					padding: 3% 0%;
+					font-size: 1em;
+					line-height: 1.5em;
+				}
+			}
+
+			.selection{
+				width: 100%;
+				float: left;
+				display: inline-block;
+
+				.items{
+					padding: 2%;
+					font-size: 0.9em;
+				}
+			}
+		}
+
+		.form-control{
+			margin-top: 5%;
+
+			.btn{
+				width: 100%;
+				font-size: 0.9em;
+				border: 0px;
+				padding: 10px 0px;
+				i{ margin-right: 10px; }
+			}
+		}
+	}
+}
+
+.logout{
+	margin-top: 70%;
+	font-size: 1em;
+}
+
+.login{
+	.welcome{
+		position: inherit;
+		width: 90%;
+		padding: 5%;
+		height: auto;
+		text-align: left;
+
+		img{
+			height: 35px;
+			margin: 0%;
+		}
+
+		h1{
+			font-size: 1.4em;
+			margin-bottom: 0%;
+		}
+		p{ font-size: 0.8em; }
+
+		.ver{
+			font-size: 0.7em;
+			margin-bottom: 3%;
+		}
+	}
+	.form{
+		width: 90%;
+		padding: 5%;
+
+		p{
+			font-size: 0.8em;
+			margin-bottom: 5%;
+		}
+		.inputtext{
+			width: 100%;
+			padding: 5%;
+			font-size: 1em;
+			margin-bottom: 3%;
+		}
+
+		.btn-submit{
+			width: 100%;
+			padding: 5% 0%;
+			font-size: 1em;
+			margin-top: 5%;
+
+			i{ margin-left: 15px; }
+		}
+	}
+}
+
+.dialog{
+	top: 15%;
+	width: 80%;
+	padding: 10% 5%;
+	margin: 0% 5%;
+
+	.input{
+		label{
+			margin-top: 3%;
+			font-size: 0.8em;
+		}
+
+		.inputtext{
+			padding: 5% 0%;
+			font-size: 1em;
+			margin-bottom: 5%;
+		}
+	}
+
+	.control{
+		.btn{
+			font-size: 1em;
+			padding: 4% 5%;
+		}
+	}
+}
+
+.bar-alert{
+	width: 90%;
+	padding: 5px 5%;
+	font-size: 0.7em;
+}
