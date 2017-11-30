@@ -95,6 +95,46 @@ $(document).ready(function(){
 
 	});
 
+	$('.btn-deactive').click(function(){
+		report_id = $(this).parent().attr('data-id');
+		$.ajax({
+			url         :api_report,
+			cache       :false,
+			dataType    :"json",
+			type        :"POST",
+			data:{
+				request 	:'deactive',
+				report_id	:report_id
+			},
+			error: function (request, status, error) {
+				console.log("Request Error",request.responseText);
+			}
+		}).done(function(data){
+			console.log(data);
+			location.reload();
+		});
+	});
+
+	$('.btn-active').click(function(){
+		report_id = $(this).parent().attr('data-id');
+		$.ajax({
+			url         :api_report,
+			cache       :false,
+			dataType    :"json",
+			type        :"POST",
+			data:{
+				request 	:'active',
+				report_id	:report_id
+			},
+			error: function (request, status, error) {
+				console.log("Request Error",request.responseText);
+			}
+		}).done(function(data){
+			console.log(data);
+			location.reload();
+		});
+	});
+
 	$('.edit').on('click','.op-items', function(e){
 		e.stopPropagation();
 

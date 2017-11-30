@@ -45,7 +45,7 @@ include_once'header.php';
 		<div class="content">
 			<?php foreach ($reports as $var) {?>
 			<div class="row" data-id="<?php echo $var['report_id'];?>" data-category="<?php echo $var['report_category_id'];?>">
-				<div class="icon <?php echo ($var['report_status'] == 'active'?'active':'');?>"><i class="fa fa-circle" aria-hidden="true"></i></div>
+				<div class="icon <?php echo ($var['report_status'] == 'active'?'btn-deactive':'btn-active');?>"><i class="fa fa-circle" aria-hidden="true"></i></div>
 				<div class="detail">
 					<h2><?php echo $var['report_name'];?></h2>
 
@@ -74,12 +74,6 @@ include_once'header.php';
 
 					<div class="edit-menu">
 						<div class="items btn-editor" data-op="edit"><i class="fa fa-cog" aria-hidden="true"></i>แก้ไข</div>
-
-						<?php if($var['report_status'] != 'active'){?>
-						<div class="items op-items" data-op="active"><i class="fa fa-check-circle" aria-hidden="true"></i>ใช้งาน</div>
-						<?php }else{?>
-						<div class="items op-items" data-op="deactive"><i class="fa fa-lock" aria-hidden="true"></i>ล็อค</div>
-						<?php }?>
 						<div class="items op-items delete" data-op="delete"><i class="fa fa-times" aria-hidden="true"></i>ลบออก</div>
 					</div>
 				</div>
