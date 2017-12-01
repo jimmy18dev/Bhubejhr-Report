@@ -384,6 +384,7 @@ body.loginBG {
   color: #66948c;
   font-size: 0.9em;
   padding: 1px 15px;
+  margin-bottom: 10px;
   border-radius: 20px;
   text-decoration: none;
 }
@@ -526,9 +527,6 @@ body.loginBG {
   padding: 0px 10px;
   border-radius: 20px;
 }
-.container .table .row .detail .info .category i {
-  margin-left: 5px;
-}
 .container .table .row .detail .info .category:hover {
   cursor: pointer;
 }
@@ -589,6 +587,9 @@ body.loginBG {
 .container .table .row .detail .info .category .category-menu .items:hover {
   cursor: pointer;
   background: #F7F7F7;
+}
+.container .table .row .detail .info .category .category-menu .items i {
+  margin-right: 10px;
 }
 .container .table .row .detail .info a {
   float: left;
@@ -967,12 +968,12 @@ body.loginBG {
   box-shadow: 1px 1px 20px rgba(0, 0, 0, 0.1);
 }
 .list-container .report-items {
-  width: 98%;
-  padding: 1%;
+  width: 96%;
+  padding: 2%;
   float: left;
   display: inline-block;
   background: #FFFFFF;
-  border-bottom: 1px solid #EEEEEE;
+  border-bottom: 1px solid #DDDDDD;
 }
 .list-container .report-items:hover {
   cursor: pointer;
@@ -982,7 +983,7 @@ body.loginBG {
 }
 .list-container .report-items .image {
   width: 7%;
-  margin-right: 2%;
+  margin-right: 3%;
   float: left;
   display: inline-block;
   text-align: center;
@@ -1008,7 +1009,7 @@ body.loginBG {
   color: #FFFFFF;
 }
 .list-container .report-items .detail {
-  width: 81%;
+  width: 80%;
   padding-right: 5%;
   float: left;
   display: inline-block;

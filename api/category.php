@@ -48,7 +48,7 @@ switch ($_SERVER['REQUEST_METHOD']){
 				$report 		= new Report();
 				$name 			= $_POST['name'];
 				$report_id 		= $_POST['report_id'];
-				$category_id 	= $category->create($name);
+				$category_id 	= $category->create($name,NULL);
 
 				$report->changeCategory($report_id,$category_id);
 				

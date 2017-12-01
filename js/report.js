@@ -168,11 +168,13 @@ $(document).ready(function(){
 
 	$('.category-menu').on('click','.category-create', function(e){
 		e.stopPropagation();
-
 		$inputtext = $(this).children('input');
 		$inputtext.keypress(function(e){
+			e.stopPropagation();
 			if(e.which == 13) {
 				var name = $(this).val();
+
+				console.log(name,report_id);
 
 				$.ajax({
 			        url         :api_category,
@@ -194,6 +196,7 @@ $(document).ready(function(){
 		});
 	});
 	$('.category-menu').on('click','.category-items', function(e){
+
 		e.stopPropagation();
 
 		$progressbar.fadeIn(300);
@@ -258,13 +261,13 @@ $(document).ready(function(){
 
 	    	$.each(data.dataset,function(k,v){
 	    		if(report_category_id == v.id){
-	    			html +='<div class="items category-items selected" data-id="'+v.id+'">'+v.name+'</div>';
+	    			html +='<div class="items category-items selected" data-id="'+v.category_id+'">'+v.category_name+'</div>';
 	    		}else{
-	    			html +='<div class="items category-items" data-id="'+v.id+'">'+v.name+'</div>';
+	    			html +='<div class="items category-items" data-id="'+v.category_id+'">'+v.category_name+'</div>';
 	    		}
 	    	});
 
-	    	html +='<div class="items category-items" data-id="0">ลบหมวดออก</div>';
+	    	html +='<div class="items category-items" data-id="0"><i class="fa fa-times" aria-hidden="true"></i>ลบหมวดออก</div>';
 
 	    	$submenu.html(html);
 	    	$submenu.show();
