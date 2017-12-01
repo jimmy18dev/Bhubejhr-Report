@@ -47,7 +47,7 @@ $reports = $report->lists('all',$_GET['category'],$_GET['q']);
 	<div class="category">
 		<a class="category-items <?php echo (empty($_GET['category'])?'active':'');?>" href="index.php?">ดูทั้งหมด</a>
 		<?php foreach ($categories as $var) {?>
-		<a class="category-items <?php echo ($var['id'] == $_GET['category']?'active':'');?>" href="category/<?php echo $var['id'];?>"><?php echo $var['name'];?></a>
+		<a class="category-items <?php echo ($var['category_id'] == $_GET['category']?'active':'');?>" href="category/<?php echo $var['category_id'];?>"><?php echo $var['category_name'];?></a>
 		<?php }?>
 	</div>
 </div>
@@ -58,14 +58,10 @@ $reports = $report->lists('all',$_GET['category'],$_GET['q']);
 	<?php }?>
 
 	<?php if(count($reports) > 0){?>
-	<div>
+	<div class="list-content">
 		<?php
 		foreach ($reports as $var){
-			if($var['report_image_format'] == 'square' || $var['report_image_format'] == 'horizontal'){
-				include'template/report.items.style3.php';
-			}else{
-				include'template/report.items.style2.php';
-			}
+			include'template/report.items.php';
 		}
 		?>
 	</div>
